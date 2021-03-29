@@ -970,6 +970,9 @@ class UIGraph():
         self.plot1.setTitle(self.strPlot1Title)
         
         self.UIGR_ResetAllGraphData(True, -1, 600)
+
+    def UIGR_SetTransactionManager(self, transactionManager):
+        self.theUIDonation.UIDO_SetTransactionManager(transactionManager)
         
     def UIGR_closeBackgroundOperations(self):
         self.timerUpdateLiveData.stop()
