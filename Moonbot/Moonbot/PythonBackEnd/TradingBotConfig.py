@@ -56,9 +56,6 @@ CONFIG_SIMU_INITIAL_BALANCE_MAX = 20000
 
 CONFIG_MIN_INITIAL_FIAT_BALANCE_TO_TRADE = 0.0001
 
-CONFIG_DONATION_DEFAULT_AMOUNT_IN_BTC = 0.0002
-CONFIG_BTC_DESTINATION_ADDRESS = "136wzpD2fYFRAAHLU5yVxiMNcARQtktoDo"
-
 
 #####################################################################################################################
 ######## Trading Parameters

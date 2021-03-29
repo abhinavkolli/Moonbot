@@ -16,7 +16,6 @@ from UIWidgets import ButtonHoverStart
 from UIWidgets import ButtonHoverStart
 from UIWidgets import ButtonHoverPause
 from UIWidgets import ButtonHoverSettings
-from UIWidgets import ButtonHoverDonation
 from UIWidgets import ButtonHoverInfo
 from UIWidgets import RadioHoverSimulation
 from UIWidgets import RadioHoverTrading
@@ -24,7 +23,6 @@ from UIWidgets import SliderHoverRiskLevel
 from UIWidgets import SliderHoverSensitivityLevel
 from UIWidgets import LabelClickable
 from UISettings import UISettings
-from UIDonation import UIDonation
 from UIInfo import UIInfo
 
 
@@ -61,7 +59,6 @@ class UIGraph():
     STR_BUTTON_START = 'Start'
     STR_BUTTON_PAUSE = 'Pause'
     STR_BUTTON_SETTINGS = 'Settings'
-    STR_BUTTON_Donation = 'Donate'
     STR_BUTTON_INFO = 'Info'
     STR_LABEL_MONEY_MIDDLEMARKET_PRICE = 'MiddleMarket price : '
     STR_LABEL_INFO = 'Info : '
@@ -173,11 +170,8 @@ class UIGraph():
         
         # Child windows 
         self.theUISettings = UISettings(Settings)
-        self.theUIDonation = UIDonation(Settings)
         self.theUIInfo = UIInfo()
-        
-        # Set child UIs to clickable label that can open them
-        self.lblInfo.SetUIs(self.theUISettings, self.theUIDonation) 
+
         
         print("UIGR - UIGraph init done!")
     
@@ -253,9 +247,6 @@ class UIGraph():
     
     def EventSettingsButtonClick(self):
         self.theUISettings.UIST_ShowWindow()
-       
-    def EventDonationButtonClick(self):
-        self.theUIDonation.UIDO_ShowWindow()
     
     def EventInfoButtonClick(self):
         self.theUIInfo.UIFO_ShowWindow()
@@ -331,13 +322,6 @@ class UIGraph():
         self.buttonSettings.setFixedHeight(28)
         self.buttonSettings.setStyleSheet(self.STR_QBUTTON_SETTINGS_STYLESHEET)
         self.buttonSettings.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.buttonDonation = ButtonHoverDonation(self.lblToolTip, self.STR_BUTTON_Donation)
-        self.buttonDonation.setVisible(True)
-        self.buttonDonation.clicked.connect(self.EventDonationButtonClick)
-        self.buttonDonation.setFixedWidth(110)
-        self.buttonDonation.setFixedHeight(28)
-        self.buttonDonation.setStyleSheet(self.STR_QBUTTON_SETTINGS_STYLESHEET)
-        self.buttonDonation.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.buttonInfo = ButtonHoverInfo(self.lblToolTip, self.STR_BUTTON_INFO)
         self.buttonInfo.setVisible(True)
         self.buttonInfo.clicked.connect(self.EventInfoButtonClick)
@@ -362,7 +346,6 @@ class UIGraph():
         self.rootHboxTop.addWidget(self.lblLogo)
         self.rootHboxTop.addWidget(self.lblVersion)
         self.rootHboxTop.addWidget(self.buttonSettings, QtCore.Qt.AlignRight)
-        self.rootHboxTop.addWidget(self.buttonDonation, QtCore.Qt.AlignRight)
         self.rootHboxTop.addWidget(self.buttonInfo, QtCore.Qt.AlignRight)
         self.rootTopBlock.setLayout(self.rootHboxTop)
         
@@ -958,13 +941,6 @@ class UIGraph():
             self.buttonSettings.setStyleSheet(self.STR_QBUTTON_SETTINGS_STYLESHEET)
         else:
             self.buttonSettings.setStyleSheet(self.STR_QBUTTON_SETTINGS_DISABLED_STYLESHEET)
-    
-    def UIGR_SetDonationButtonsEnabled(self, bEnable):
-        self.buttonDonation.setEnabled(bEnable)
-        if (bEnable == True):
-            self.buttonDonation.setStyleSheet(self.STR_QBUTTON_SETTINGS_STYLESHEET)
-        else:
-            self.buttonDonation.setStyleSheet(self.STR_QBUTTON_SETTINGS_DISABLED_STYLESHEET)
             
     def UIGR_SetCurrentAppState(self, appState):
         self.currentAppState = appState
@@ -994,12 +970,6 @@ class UIGraph():
         self.plot1.setTitle(self.strPlot1Title)
         
         self.UIGR_ResetAllGraphData(True, -1, 600)
-        
-    def UIGR_SetTransactionManager(self, transactionManager):
-        self.theUIDonation.UIDO_SetTransactionManager(transactionManager)
-        
-    def UIGR_RequestDonationWindowDisplay(self):
-        self.theUIDonation.UIDO_ShowWindow()
         
     def UIGR_closeBackgroundOperations(self):
         self.timerUpdateLiveData.stop()
