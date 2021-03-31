@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ovm-Pm-All">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V8t-0R-6My">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -269,7 +269,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="opV-ah-hXY"/>
                         <barButtonItem key="rightBarButtonItem" title="Done" id="QQd-2M-xHi">
                             <connections>
-                                <segue destination="SnP-hu-5pV" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="Zq0-Pl-Dk0"/>
+                                <segue destination="SnP-hu-5pV" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="6fW-xx-2Sg"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -280,7 +280,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSf-ce-LCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SnP-hu-5pV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1138" y="1773"/>
+            <point key="canvasLocation" x="1042" y="1771"/>
         </scene>
         <!--Name-->
         <scene sceneID="eJ6-LU-gDy">
@@ -351,7 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvX-mu-910" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2129" y="1773"/>
+            <point key="canvasLocation" x="2033" y="1771"/>
         </scene>
         <!--Trades-->
         <scene sceneID="Fa0-Sy-37E">
@@ -367,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSU-EP-heE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="889"/>
+            <point key="canvasLocation" x="1863.7681159420292" y="888.61607142857144"/>
         </scene>
         <!--Markets-->
         <scene sceneID="bea-UJ-8Nm">
@@ -383,7 +383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C87-LY-eSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1419" y="889"/>
+            <point key="canvasLocation" x="-1428" y="889"/>
         </scene>
         <!--Settings-->
         <scene sceneID="KGw-UJ-Sp6">
@@ -399,7 +399,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qHs-j8-xee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1680" y="884"/>
+            <point key="canvasLocation" x="2589.8550724637685" y="883.92857142857144"/>
         </scene>
         <!--Positions-->
         <scene sceneID="hZY-hZ-rPk">
@@ -415,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9sl-xm-QQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-688" y="889"/>
+            <point key="canvasLocation" x="-696" y="889"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="K4X-IX-imd">
@@ -429,7 +429,7 @@
                     <connections>
                         <segue destination="aoh-yK-V2g" kind="relationship" relationship="viewControllers" id="la1-H0-m5h"/>
                         <segue destination="ukQ-n9-JQk" kind="relationship" relationship="viewControllers" id="sfF-lm-gyt"/>
-                        <segue destination="iz0-Eq-PdK" kind="relationship" relationship="viewControllers" id="yKZ-7F-mFP"/>
+                        <segue destination="ShR-MN-Osf" kind="relationship" relationship="viewControllers" id="yKZ-7F-mFP"/>
                         <segue destination="6T2-08-FUE" kind="relationship" relationship="viewControllers" id="ABj-M1-akU"/>
                         <segue destination="S6B-03-kpv" kind="relationship" relationship="viewControllers" id="Er0-4O-GaC"/>
                     </connections>
@@ -437,33 +437,8 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kgU-ty-ar0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="132" y="-28"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3eI-52-iFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-48" y="-28"/>
         </scene>
         <!--Home-->
-        <scene sceneID="Vdj-aM-70F">
-            <objects>
-                <viewController id="Rbe-a5-eh5" customClass="MoonBotViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Gr9-mb-ViL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="g4a-2C-mOu"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Home" id="osQ-Tk-vvI">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="Fk1-fc-jCF">
-                            <connections>
-                                <segue destination="k8V-sx-JoX" kind="show" id="7SG-WQ-INr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Iyi-Av-QVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1138" y="889"/>
-        </scene>
-        <!--MoonBot-->
         <scene sceneID="gpl-IO-q2w">
             <objects>
                 <viewController id="iz0-Eq-PdK" customClass="MoonBotViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
@@ -473,14 +448,40 @@
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="hIY-AS-Jw4"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MoonBot" image="moon" catalog="system" selectedImage="moon.fill" id="WeZ-M8-qu6"/>
+                    <navigationItem key="navigationItem" title="Home" id="d34-fC-e1F">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.crop.circle" catalog="system" id="gBI-ZZ-ZZf">
+                            <connections>
+                                <segue destination="k8V-sx-JoX" kind="show" id="06q-02-doF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaT-AL-VPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="889"/>
+            <point key="canvasLocation" x="1042.0289855072465" y="888.61607142857144"/>
+        </scene>
+        <!--MoonBot-->
+        <scene sceneID="hm4-Xd-eka">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ShR-MN-Osf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MoonBot" image="moon" catalog="system" selectedImage="moon.fill" id="WeZ-M8-qu6"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0I9-5v-aNe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iz0-Eq-PdK" kind="relationship" relationship="rootViewController" id="tQM-xf-ELj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7gc-2Y-Ugj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="888.61607142857144"/>
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
         <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
         <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
         <image name="lightbulb" catalog="system" width="113" height="128"/>
@@ -489,6 +490,7 @@
         <image name="moon.fill" catalog="system" width="128" height="121"/>
         <image name="pencil.circle" catalog="system" width="128" height="121"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="person.icloud" catalog="system" width="128" height="88"/>
         <image name="person.icloud.fill" catalog="system" width="128" height="88"/>
     </resources>
