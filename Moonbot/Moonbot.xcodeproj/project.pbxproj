@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3085408126121A10004F4DFF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085408026121A10004F4DFF /* HomeViewController.swift */; };
+		3085408326121B31004F4DFF /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085408226121B31004F4DFF /* UserProfileTableViewController.swift */; };
+		30854085261221B8004F4DFF /* UserProfileNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */; };
 		AD03F884260CCCCE00CE271F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD03F883260CCCCE00CE271F /* AppDelegate.swift */; };
 		AD03F886260CCCCE00CE271F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD03F885260CCCCE00CE271F /* SceneDelegate.swift */; };
 		AD03F888260CCCCE00CE271F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD03F887260CCCCE00CE271F /* ViewController.swift */; };
@@ -16,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3085408026121A10004F4DFF /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3085408226121B31004F4DFF /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
+		30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileNameTableViewController.swift; sourceTree = "<group>"; };
 		AD03F880260CCCCE00CE271F /* Moonbot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonbot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD03F883260CCCCE00CE271F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD03F885260CCCCE00CE271F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +66,9 @@
 				AD03F885260CCCCE00CE271F /* SceneDelegate.swift */,
 				AD03F887260CCCCE00CE271F /* ViewController.swift */,
 				AD03F889260CCCCE00CE271F /* Main.storyboard */,
+				3085408226121B31004F4DFF /* UserProfileTableViewController.swift */,
+				30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */,
+				3085408026121A10004F4DFF /* HomeViewController.swift */,
 				AD03F88C260CCCD000CE271F /* Assets.xcassets */,
 				AD03F88E260CCCD000CE271F /* LaunchScreen.storyboard */,
 				AD03F891260CCCD000CE271F /* Info.plist */,
@@ -141,6 +150,9 @@
 				AD03F888260CCCCE00CE271F /* ViewController.swift in Sources */,
 				AD03F884260CCCCE00CE271F /* AppDelegate.swift in Sources */,
 				AD03F886260CCCCE00CE271F /* SceneDelegate.swift in Sources */,
+				3085408326121B31004F4DFF /* UserProfileTableViewController.swift in Sources */,
+				3085408126121A10004F4DFF /* HomeViewController.swift in Sources */,
+				30854085261221B8004F4DFF /* UserProfileNameTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
