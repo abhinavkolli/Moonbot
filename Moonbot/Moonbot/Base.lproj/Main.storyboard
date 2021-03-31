@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ovm-Pm-All">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -280,7 +280,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dSf-ce-LCe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="SnP-hu-5pV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1674" y="138"/>
+            <point key="canvasLocation" x="1138" y="1773"/>
         </scene>
         <!--Name-->
         <scene sceneID="eJ6-LU-gDy">
@@ -351,49 +351,150 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvX-mu-910" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2439.130434782609" y="-232.36607142857142"/>
+            <point key="canvasLocation" x="2129" y="1773"/>
         </scene>
-        <!--Home-->
-        <scene sceneID="t5h-QN-wPj">
+        <!--Trades-->
+        <scene sceneID="jAl-KY-xqk">
             <objects>
-                <viewController id="Nxs-38-567" customClass="HomeViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="i51-FI-oU3">
+                <viewController id="59Q-UB-8Q8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hHD-Fz-aIF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="lAc-74-oOv"/>
+                        <viewLayoutGuide key="safeArea" id="7x5-r9-KRy"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Home" id="UbR-6X-J5y">
-                        <barButtonItem key="rightBarButtonItem" title="User Profile Button" image="person.crop.circle" catalog="system" id="k9M-mM-69N">
+                    <tabBarItem key="tabBarItem" title="Trades" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="83o-5v-YiX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JcJ-Vn-IHf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="891"/>
+        </scene>
+        <!--Markets-->
+        <scene sceneID="8Gg-kt-6Cy">
+            <objects>
+                <viewController id="tFx-K5-IMs" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amx-1t-lff">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="khi-fb-nxH"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Markets" image="lightbulb" catalog="system" selectedImage="lightbulb.fill" id="29c-ex-uVH"/>
+                    <navigationItem key="navigationItem" id="9yM-Gw-E9f"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DeC-Xd-ogf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1419" y="889"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="DGq-i6-9Zo">
+            <objects>
+                <viewController id="5Dp-ha-soe" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xCY-Y4-jYp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="339-oC-NHr"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="person.icloud" catalog="system" selectedImage="person.icloud.fill" id="W4H-I1-afz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vi2-nf-T7i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2783" y="887"/>
+        </scene>
+        <!--Positions-->
+        <scene sceneID="qwR-U2-uFC">
+            <objects>
+                <viewController id="Lem-Qp-pTD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IhB-Yt-ORz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="mzK-xD-Gq1"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Positions" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle.fill" id="6TR-Y6-J0G"/>
+                    <navigationItem key="navigationItem" id="N1B-1T-ISI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6q-Xg-kFC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-646" y="889"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ZOA-4x-haf">
+            <objects>
+                <tabBarController id="ovm-Pm-All" customClass="TabBarController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vQa-by-Riz"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="f1s-FR-GKE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="tFx-K5-IMs" kind="relationship" relationship="viewControllers" id="VlG-RP-INr"/>
+                        <segue destination="Lem-Qp-pTD" kind="relationship" relationship="viewControllers" id="ef0-xf-aoG"/>
+                        <segue destination="WfG-2k-RKk" kind="relationship" relationship="viewControllers" id="YPG-tT-wU0"/>
+                        <segue destination="59Q-UB-8Q8" kind="relationship" relationship="viewControllers" id="jGQ-UQ-U42"/>
+                        <segue destination="5Dp-ha-soe" kind="relationship" relationship="viewControllers" id="Ybj-9W-K68"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3eI-52-iFR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-48" y="-28"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="Vdj-aM-70F">
+            <objects>
+                <viewController id="Rbe-a5-eh5" customClass="MoonBotViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Gr9-mb-ViL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="g4a-2C-mOu"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="osQ-Tk-vvI">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.circle" catalog="system" id="Fk1-fc-jCF">
                             <connections>
-                                <segue destination="k8V-sx-JoX" kind="show" id="cIh-mx-2qA"/>
+                                <segue destination="k8V-sx-JoX" kind="show" id="7SG-WQ-INr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ls-41-Pu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iyi-Av-QVX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="857" y="138"/>
+            <point key="canvasLocation" x="1138" y="889"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="K5V-hZ-bjp">
+        <!--MoonBot-->
+        <scene sceneID="0i9-5Z-XQU">
             <objects>
-                <navigationController id="5ww-S4-N6c" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rgD-ge-htH">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WfG-2k-RKk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="MoonBot" image="moon" catalog="system" selectedImage="moon.fill" id="CTR-Pv-dhG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TBK-fr-rm3">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Nxs-38-567" kind="relationship" relationship="rootViewController" id="vET-jn-IoN"/>
+                        <segue destination="Rbe-a5-eh5" kind="relationship" relationship="rootViewController" id="LWj-aG-3wW"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DLo-Tn-l3R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="THQ-gY-2f1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32" y="138"/>
+            <point key="canvasLocation" x="213" y="889"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.right" catalog="system" width="128" height="98"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <image name="moon" catalog="system" width="128" height="121"/>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
+        <image name="person.icloud" catalog="system" width="128" height="88"/>
+        <image name="person.icloud.fill" catalog="system" width="128" height="88"/>
     </resources>
 </document>
