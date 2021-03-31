@@ -13,6 +13,12 @@
 		AD03F88B260CCCCE00CE271F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD03F889260CCCCE00CE271F /* Main.storyboard */; };
 		AD03F88D260CCCD000CE271F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD03F88C260CCCD000CE271F /* Assets.xcassets */; };
 		AD03F890260CCCD000CE271F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD03F88E260CCCD000CE271F /* LaunchScreen.storyboard */; };
+		AD4044C62614B8A600A51955 /* MoonBotViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044C52614B8A600A51955 /* MoonBotViewController.swift */; };
+		AD4044C82614B8B700A51955 /* TradeRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044C72614B8B700A51955 /* TradeRecordsViewController.swift */; };
+		AD4044CA2614B8C400A51955 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044C92614B8C400A51955 /* SettingsViewController.swift */; };
+		AD4044CC2614B8D200A51955 /* CurrentBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044CB2614B8D200A51955 /* CurrentBalanceViewController.swift */; };
+		AD4044CE2614B8DB00A51955 /* MarketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044CD2614B8DB00A51955 /* MarketsViewController.swift */; };
+		AD4044D22614B91300A51955 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4044D12614B91300A51955 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,12 @@
 		AD03F88C260CCCD000CE271F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD03F88F260CCCD000CE271F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD03F891260CCCD000CE271F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD4044C52614B8A600A51955 /* MoonBotViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonBotViewController.swift; sourceTree = "<group>"; };
+		AD4044C72614B8B700A51955 /* TradeRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeRecordsViewController.swift; sourceTree = "<group>"; };
+		AD4044C92614B8C400A51955 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AD4044CB2614B8D200A51955 /* CurrentBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentBalanceViewController.swift; sourceTree = "<group>"; };
+		AD4044CD2614B8DB00A51955 /* MarketsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketsViewController.swift; sourceTree = "<group>"; };
+		AD4044D12614B91300A51955 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +75,12 @@
 				AD03F88C260CCCD000CE271F /* Assets.xcassets */,
 				AD03F88E260CCCD000CE271F /* LaunchScreen.storyboard */,
 				AD03F891260CCCD000CE271F /* Info.plist */,
+				AD4044C52614B8A600A51955 /* MoonBotViewController.swift */,
+				AD4044C72614B8B700A51955 /* TradeRecordsViewController.swift */,
+				AD4044C92614B8C400A51955 /* SettingsViewController.swift */,
+				AD4044CB2614B8D200A51955 /* CurrentBalanceViewController.swift */,
+				AD4044CD2614B8DB00A51955 /* MarketsViewController.swift */,
+				AD4044D12614B91300A51955 /* TabBarController.swift */,
 			);
 			path = Moonbot;
 			sourceTree = "<group>";
@@ -141,6 +159,12 @@
 				AD03F888260CCCCE00CE271F /* ViewController.swift in Sources */,
 				AD03F884260CCCCE00CE271F /* AppDelegate.swift in Sources */,
 				AD03F886260CCCCE00CE271F /* SceneDelegate.swift in Sources */,
+				AD4044D22614B91300A51955 /* TabBarController.swift in Sources */,
+				AD4044CC2614B8D200A51955 /* CurrentBalanceViewController.swift in Sources */,
+				AD4044CE2614B8DB00A51955 /* MarketsViewController.swift in Sources */,
+				AD4044C62614B8A600A51955 /* MoonBotViewController.swift in Sources */,
+				AD4044C82614B8B700A51955 /* TradeRecordsViewController.swift in Sources */,
+				AD4044CA2614B8C400A51955 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

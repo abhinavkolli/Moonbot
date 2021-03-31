@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="V8t-0R-6My">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Trades-->
+        <scene sceneID="Fa0-Sy-37E">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="6T2-08-FUE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YZ6-l0-nY7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="8jQ-hh-l41"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Trades" image="pencil.circle" catalog="system" selectedImage="pencil.circle.fill" id="S7x-rt-s1x"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSU-EP-heE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="955" y="889"/>
+        </scene>
+        <!--Markets-->
+        <scene sceneID="bea-UJ-8Nm">
+            <objects>
+                <viewController id="aoh-yK-V2g" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wji-gz-oBV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="c96-MJ-OQl"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Markets" image="lightbulb" catalog="system" selectedImage="lightbulb.fill" id="RLF-h8-ndY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C87-LY-eSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1419" y="889"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="KGw-UJ-Sp6">
+            <objects>
+                <viewController id="S6B-03-kpv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a5h-c1-MRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="kMR-84-ZSu"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="person.icloud" catalog="system" selectedImage="person.icloud.fill" id="yHZ-Kd-csW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHs-j8-xee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1680" y="884"/>
+        </scene>
+        <!--Positions-->
+        <scene sceneID="hZY-hZ-rPk">
+            <objects>
+                <viewController id="ukQ-n9-JQk" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L54-BJ-zop">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Eue-VB-D3E"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Positions" image="dollarsign.circle" catalog="system" selectedImage="dollarsign.circle.fill" id="IJS-B2-afl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9sl-xm-QQG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-688" y="889"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="K4X-IX-imd">
+            <objects>
+                <tabBarController id="V8t-0R-6My" customClass="TabBarController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="whA-IF-c93">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aoh-yK-V2g" kind="relationship" relationship="viewControllers" id="la1-H0-m5h"/>
+                        <segue destination="ukQ-n9-JQk" kind="relationship" relationship="viewControllers" id="sfF-lm-gyt"/>
+                        <segue destination="iz0-Eq-PdK" kind="relationship" relationship="viewControllers" id="yKZ-7F-mFP"/>
+                        <segue destination="6T2-08-FUE" kind="relationship" relationship="viewControllers" id="ABj-M1-akU"/>
+                        <segue destination="S6B-03-kpv" kind="relationship" relationship="viewControllers" id="Er0-4O-GaC"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgU-ty-ar0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="-28"/>
+        </scene>
+        <!--MoonBot-->
+        <scene sceneID="gpl-IO-q2w">
+            <objects>
+                <viewController id="iz0-Eq-PdK" customClass="MoonBotViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rf4-p5-qGF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="hIY-AS-Jw4"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MoonBot" image="moon" catalog="system" selectedImage="moon.fill" id="WeZ-M8-qu6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kaT-AL-VPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="889"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dollarsign.circle" catalog="system" width="128" height="121"/>
+        <image name="dollarsign.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="lightbulb" catalog="system" width="113" height="128"/>
+        <image name="lightbulb.fill" catalog="system" width="113" height="128"/>
+        <image name="moon" catalog="system" width="128" height="121"/>
+        <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle" catalog="system" width="128" height="121"/>
+        <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="person.icloud" catalog="system" width="128" height="88"/>
+        <image name="person.icloud.fill" catalog="system" width="128" height="88"/>
+    </resources>
 </document>
