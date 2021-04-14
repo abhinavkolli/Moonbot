@@ -126,6 +126,9 @@
                                                 <constraint firstItem="fM7-cq-vLu" firstAttribute="top" secondItem="gbU-ld-lqn" secondAttribute="topMargin" id="vz8-SP-8bU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="tYM-HT-Xm1" kind="show" id="mie-bl-aRw"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="RYE-JT-oX8">
                                         <rect key="frame" x="0.0" y="158.5" width="414" height="43.5"/>
@@ -353,6 +356,56 @@
             </objects>
             <point key="canvasLocation" x="2033" y="1771"/>
         </scene>
+        <!--Birthday-->
+        <scene sceneID="iJY-jt-hch">
+            <objects>
+                <tableViewController id="tYM-HT-Xm1" customClass="UserProfileBirthdayTableViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ecs-4t-9gw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Birthday Date" id="cUb-C8-UTo">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hgh-kz-OOx" userLabel="Birthday Date Cell">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hgh-kz-OOx" id="4oU-gi-iaF">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="June 27, 2003" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gs0-ng-pTo">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gs0-ng-pTo" firstAttribute="top" secondItem="4oU-gi-iaF" secondAttribute="topMargin" id="F0v-86-deY"/>
+                                                <constraint firstItem="Gs0-ng-pTo" firstAttribute="leading" secondItem="4oU-gi-iaF" secondAttribute="leadingMargin" id="FFt-Uz-nTH"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Gs0-ng-pTo" secondAttribute="bottom" id="aei-NZ-UXg"/>
+                                                <constraint firstItem="Gs0-ng-pTo" firstAttribute="trailing" secondItem="4oU-gi-iaF" secondAttribute="trailingMargin" id="vYf-T1-ji5"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="tYM-HT-Xm1" id="cbq-Zq-LIA"/>
+                            <outlet property="delegate" destination="tYM-HT-Xm1" id="kAv-0k-ca5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Birthday" id="adP-fi-bUS"/>
+                    <connections>
+                        <outlet property="birthdayDateLabel" destination="Gs0-ng-pTo" id="2Ps-i5-aa0"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2zj-lG-rNt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2031.8840579710147" y="2551.3392857142858"/>
+        </scene>
         <!--Trades-->
         <scene sceneID="Fa0-Sy-37E">
             <objects>
@@ -469,6 +522,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0I9-5v-aNe">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

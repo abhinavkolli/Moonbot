@@ -1,17 +1,18 @@
 //
-//  UserProfileNameTableViewController.swift
+//  UserProfileBirthdayTableViewController.swift
 //  Moonbot
 //
-//  Created by Vaille, Ciaran A on 3/29/21.
+//  Created by Vaille, Ciaran A on 4/14/21.
 //  Copyright © 2021 Kolli, Abhinav R. All rights reserved.
 //
 
 import UIKit
 
-class UserProfileNameTableViewController: UITableViewController {
+class UserProfileBirthdayTableViewController: UITableViewController {
 
-    @IBOutlet var firstNameTextField: UITextField!
-    @IBOutlet var lastNameTextField: UITextField!
+    @IBOutlet var birthdayDateLabel: UILabel!
+    
+    let datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,26 +22,55 @@ class UserProfileNameTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        createDatePicker()
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    func createDatePicker() {
+        //toolbar
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        //bar button
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        /*
+        //assign toolbar
+        button.inputAccessoryView = toolbar
+        
+        //assign date picker to the text field
+        button.onin = datePicker
+        */
+        let tapOnBirthdayDateLabel = UITapGestureRecognizer(target: self, action: #selector(tapBirthdayDateLabel(tapGestureRecognizer:)))
+        birthdayDateLabel.isUserInteractionEnabled = true
+        birthdayDateLabel.addGestureRecognizer(tapOnBirthdayDateLabel)
+        print("Got here 2!")
+ 
+        //date picker mode
+        datePicker.datePickerMode = .date
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        if let userProfileTableViewController = UserProfileTableViewController.userProfileTableViewController {
-            userProfileTableViewController.userFirstName = firstNameTextField.text!
-            userProfileTableViewController.userLastName = lastNameTextField.text!
+    @objc func donePressed() {
+        //formatter
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        birthdayDateLabel.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+    }
+    
+    @objc func tapBirthdayDateLabel(tapGestureRecognizer: UITapGestureRecognizer) {
+        print("Got here!")
+    }
+    
+    /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0 {
+            createDatePicker()
         }
-    }
+    }*/
     
-    override func viewWillAppear(_ animated: Bool) {
-        if let userProfileTableViewController = UserProfileTableViewController.userProfileTableViewController {
-            firstNameTextField.text = userProfileTableViewController.userFirstName
-            lastNameTextField.text = userProfileTableViewController.userLastName
-        }
-    }
-
     // MARK: - Table view data source
 
     /*override func numberOfSections(in tableView: UITableView) -> Int {

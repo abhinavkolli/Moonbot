@@ -10,27 +10,64 @@ import UIKit
 
 class UserProfileTableViewController: UITableViewController {
     
-    static var userProfileTableViewController: UserProfileTableViewController!
+    static var userProfileTableViewController: UserProfileTableViewController?
     
     @IBOutlet var nameLabel: UILabel!
     
+    var userFirstName: String? = "Ciaran" {
+        didSet {
+            updateNameLabelText()
+        }
+    }
+    var userLastName: String? = "Vaille" {
+        didSet {
+            updateNameLabelText()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-            UserProfileTableViewController.userProfileTableViewController = self
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        if let userProfileTableViewController = UserProfileTableViewController.userProfileTableViewController {
+            userFirstName = userProfileTableViewController.userFirstName
+            userLastName = userProfileTableViewController.userLastName
+        }
+        UserProfileTableViewController.userProfileTableViewController = self
+        
         self.navigationItem.hidesBackButton = true
+        
+        /*if let nameLabelText = nameLabel.text {
+            //Creates an array that should have two indexes. Index 0 = user first name, Index 1 = user last name.
+            let fullNameArr = nameLabelText.split{$0 == " "}.map(String.init)
+            
+            //Sets the variables that indicates the user's first name and last name based on what the nameLabel's text was set to on the storyboard.
+            userFirstName = fullNameArr[0]
+            if fullNameArr.count > 1 {
+                userLastName = fullNameArr[1]
+            }
+        }*/
     }
 
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
+        
+    }
+    
+    func updateNameLabelText() {
+        if let firstName = userFirstName, let lastName = userLastName {
+            nameLabel.text = firstName + " " + lastName
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        updateNameLabelText()
     }
 
     /*override func numberOfSections(in tableView: UITableView) -> Int {
