@@ -13,6 +13,7 @@ class UserProfileTableViewController: UITableViewController {
     static var userProfileTableViewController: UserProfileTableViewController?
     
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var birthdayLabel: UILabel!
     
     var userFirstName: String? = "Ciaran" {
         didSet {
@@ -22,6 +23,12 @@ class UserProfileTableViewController: UITableViewController {
     var userLastName: String? = "Vaille" {
         didSet {
             updateNameLabelText()
+        }
+    }
+    
+    var userBirthdayDate: Date? {
+        didSet {
+            updateBirthdayLabel()
         }
     }
     
@@ -37,6 +44,7 @@ class UserProfileTableViewController: UITableViewController {
         if let userProfileTableViewController = UserProfileTableViewController.userProfileTableViewController {
             userFirstName = userProfileTableViewController.userFirstName
             userLastName = userProfileTableViewController.userLastName
+            userBirthdayDate = userProfileTableViewController.userBirthdayDate
         }
         UserProfileTableViewController.userProfileTableViewController = self
         
@@ -60,14 +68,27 @@ class UserProfileTableViewController: UITableViewController {
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        updateNameLabelText()
+        updateBirthdayLabel()
+    }
+    
     func updateNameLabelText() {
         if let firstName = userFirstName, let lastName = userLastName {
             nameLabel.text = firstName + " " + lastName
         }
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        updateNameLabelText()
+    func updateBirthdayLabel() {
+        if let birthdayDate = userBirthdayDate {
+            //formatter
+            let formatter = DateFormatter()
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .none
+            
+            //updating label
+            birthdayLabel.text = formatter.string(from: birthdayDate)
+        }
     }
 
     /*override func numberOfSections(in tableView: UITableView) -> Int {

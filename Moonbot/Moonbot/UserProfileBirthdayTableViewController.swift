@@ -10,9 +10,12 @@ import UIKit
 
 class UserProfileBirthdayTableViewController: UITableViewController {
 
+    @IBOutlet var birthdayDateTextField: UITextField!
+    
     @IBOutlet var birthdayDateLabel: UILabel!
     
     let datePicker = UIDatePicker()
+    let dateFormatter = DateFormatter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,46 +26,72 @@ class UserProfileBirthdayTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        //sets key settings on the date formatter
+        dateFormatter.dateStyle = .medium
+        dateFormatter.timeStyle = .none
+        
+        //updates the birthday date label to accurately reflect the user's birthday
+        if let birthdayDate = UserProfileTableViewController.userProfileTableViewController?.userBirthdayDate {
+            birthdayDateLabel.text = dateFormatter.string(from: birthdayDate)
+        }
+        
+        //date picker actually gets created
         createDatePicker()
     }
     
     func createDatePicker() {
         //toolbar
-        let toolbar = UIToolbar()
+        let toolbar = UIToolbar(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: self.view.frame.size.width, height: CGFloat(44))))
         toolbar.sizeToFit()
         
         //bar button
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(donePressed))
         toolbar.setItems([doneBtn], animated: true)
         
-        /*
         //assign toolbar
-        button.inputAccessoryView = toolbar
+        birthdayDateTextField.inputAccessoryView = toolbar
         
         //assign date picker to the text field
-        button.onin = datePicker
-        */
-        let tapOnBirthdayDateLabel = UITapGestureRecognizer(target: self, action: #selector(tapBirthdayDateLabel(tapGestureRecognizer:)))
-        birthdayDateLabel.isUserInteractionEnabled = true
-        birthdayDateLabel.addGestureRecognizer(tapOnBirthdayDateLabel)
-        print("Got here 2!")
+        birthdayDateTextField.inputView = datePicker
  
         //date picker mode
         datePicker.datePickerMode = .date
+        
+        //set min and max date of date picker
+        let calendar = Calendar(identifier: .gregorian)
+
+        let currentDate = Date()
+        var components = DateComponents()
+        components.calendar = calendar
+
+        components.year = -18
+        components.month = 0
+        let maxDate = calendar.date(byAdding: components, to: currentDate)!
+
+        components.year = -120
+        let minDate = calendar.date(byAdding: components, to: currentDate)!
+        
+        datePicker.maximumDate = maxDate
+        datePicker.minimumDate = minDate
+        
+        //set current date of date picker
+        if let birthdayDate = UserProfileTableViewController.userProfileTableViewController?.userBirthdayDate {
+            datePicker.date = birthdayDate
+        }
     }
     
     @objc func donePressed() {
-        //formatter
-        let formatter = DateFormatter()
-        formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        //updates user profile table view
+        UserProfileTableViewController.userProfileTableViewController?.userBirthdayDate = datePicker.date
         
-        birthdayDateLabel.text = formatter.string(from: datePicker.date)
+        //updates the birthday date label
+        birthdayDateLabel.text = dateFormatter.string(from: datePicker.date)
+        
         self.view.endEditing(true)
     }
     
-    @objc func tapBirthdayDateLabel(tapGestureRecognizer: UITapGestureRecognizer) {
-        print("Got here!")
+    @IBAction func BirthdayDateTextFieldEditingChanged(_ sender: UITextField) {
+        birthdayDateTextField.text = String.init()
     }
     
     /*override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
