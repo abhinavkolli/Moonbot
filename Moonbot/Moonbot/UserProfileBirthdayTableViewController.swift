@@ -90,7 +90,7 @@ class UserProfileBirthdayTableViewController: UITableViewController {
         self.view.endEditing(true)
     }
     
-    @IBAction func BirthdayDateTextFieldEditingChanged(_ sender: UITextField) {
+    @IBAction func BirthdayDateTextFieldEditingChanged() {
         birthdayDateTextField.text = String.init()
     }
     

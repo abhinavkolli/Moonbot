@@ -14,6 +14,7 @@ class UserProfileTableViewController: UITableViewController {
     
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
+    @IBOutlet var mobileNumberLabel: UILabel!
     
     var userFirstName: String? = "Ciaran" {
         didSet {
@@ -32,6 +33,14 @@ class UserProfileTableViewController: UITableViewController {
         }
     }
     
+    var userMobileNumberCountryCode: MobileNumberCountryCode?
+    
+    var userMobileNumber: Int? = 9728049380 {
+        didSet {
+            updateMobileNumberLabel()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,6 +54,8 @@ class UserProfileTableViewController: UITableViewController {
             userFirstName = userProfileTableViewController.userFirstName
             userLastName = userProfileTableViewController.userLastName
             userBirthdayDate = userProfileTableViewController.userBirthdayDate
+            userMobileNumberCountryCode = userProfileTableViewController.userMobileNumberCountryCode
+            userMobileNumber = userProfileTableViewController.userMobileNumber
         }
         UserProfileTableViewController.userProfileTableViewController = self
         
@@ -71,6 +82,7 @@ class UserProfileTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         updateNameLabelText()
         updateBirthdayLabel()
+        updateMobileNumberLabel()
     }
     
     func updateNameLabelText() {
@@ -88,6 +100,14 @@ class UserProfileTableViewController: UITableViewController {
             
             //updating label
             birthdayLabel.text = formatter.string(from: birthdayDate)
+        }
+    }
+    
+    func updateMobileNumberLabel() {
+        if let mobileNumber = userMobileNumber {
+            var mobileNumberLabelNewText = "(" + String(mobileNumber).prefix(3) + ") " + String(mobileNumber)[String(mobileNumber).index(String(mobileNumber).endIndex, offsetBy: -1 * (String(mobileNumber).count - 3))...]
+            mobileNumberLabelNewText = mobileNumberLabelNewText.prefix(9) + "-" + mobileNumberLabelNewText[mobileNumberLabelNewText.index(mobileNumberLabelNewText.endIndex, offsetBy: -1 * (mobileNumberLabelNewText.count - 9))...]
+            mobileNumberLabel.text = mobileNumberLabelNewText
         }
     }
 

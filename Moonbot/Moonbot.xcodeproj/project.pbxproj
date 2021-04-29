@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303A027F262F1AC2004A0738 /* MobileNumberCountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 303A027E262F1AC2004A0738 /* MobileNumberCountryCode.swift */; };
+		307E848D2629DC4A00364E8B /* UserProfileMobileNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 307E848C2629DC4A00364E8B /* UserProfileMobileNumberTableViewController.swift */; };
 		3085408326121B31004F4DFF /* UserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3085408226121B31004F4DFF /* UserProfileTableViewController.swift */; };
 		30854085261221B8004F4DFF /* UserProfileNameTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */; };
 		30B4FB702627303800A55B2E /* UserProfileBirthdayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B4FB6F2627303800A55B2E /* UserProfileBirthdayTableViewController.swift */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303A027E262F1AC2004A0738 /* MobileNumberCountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNumberCountryCode.swift; sourceTree = "<group>"; };
+		307E848C2629DC4A00364E8B /* UserProfileMobileNumberTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileMobileNumberTableViewController.swift; sourceTree = "<group>"; };
 		3085408226121B31004F4DFF /* UserProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileTableViewController.swift; sourceTree = "<group>"; };
 		30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileNameTableViewController.swift; sourceTree = "<group>"; };
 		30B4FB6F2627303800A55B2E /* UserProfileBirthdayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileBirthdayTableViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,8 @@
 				AD03F887260CCCCE00CE271F /* ViewController.swift */,
 				AD03F889260CCCCE00CE271F /* Main.storyboard */,
 				30B4FB6F2627303800A55B2E /* UserProfileBirthdayTableViewController.swift */,
+				307E848C2629DC4A00364E8B /* UserProfileMobileNumberTableViewController.swift */,
+				303A027E262F1AC2004A0738 /* MobileNumberCountryCode.swift */,
 				3085408226121B31004F4DFF /* UserProfileTableViewController.swift */,
 				30854084261221B8004F4DFF /* UserProfileNameTableViewController.swift */,
 				AD03F88C260CCCD000CE271F /* Assets.xcassets */,
@@ -166,8 +172,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD03F888260CCCCE00CE271F /* ViewController.swift in Sources */,
+				307E848D2629DC4A00364E8B /* UserProfileMobileNumberTableViewController.swift in Sources */,
 				30B4FB702627303800A55B2E /* UserProfileBirthdayTableViewController.swift in Sources */,
 				AD03F884260CCCCE00CE271F /* AppDelegate.swift in Sources */,
+				303A027F262F1AC2004A0738 /* MobileNumberCountryCode.swift in Sources */,
 				AD03F886260CCCCE00CE271F /* SceneDelegate.swift in Sources */,
 				AD4044D22614B91300A51955 /* TabBarController.swift in Sources */,
 				AD4044CC2614B8D200A51955 /* CurrentBalanceViewController.swift in Sources */,
