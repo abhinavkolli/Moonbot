@@ -15,6 +15,9 @@ class UserProfileTableViewController: UITableViewController {
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var birthdayLabel: UILabel!
     @IBOutlet var mobileNumberLabel: UILabel!
+    @IBOutlet var emailLabel: UILabel!
+    
+    //Name
     
     var userFirstName: String? = "Ciaran" {
         didSet {
@@ -27,17 +30,29 @@ class UserProfileTableViewController: UITableViewController {
         }
     }
     
+    //Birthday
+    
     var userBirthdayDate: Date? {
         didSet {
             updateBirthdayLabel()
         }
     }
     
+    //Mobile Number
+    
     var userMobileNumberCountryCode: MobileNumberCountryCode?
     
     var userMobileNumber: Int? = 9728049380 {
         didSet {
             updateMobileNumberLabel()
+        }
+    }
+    
+    //Email
+    
+    var userEmailAddress: String? = "ciaran@vaille.com" {
+        didSet {
+            updateEmailLabel()
         }
     }
     
@@ -56,6 +71,7 @@ class UserProfileTableViewController: UITableViewController {
             userBirthdayDate = userProfileTableViewController.userBirthdayDate
             userMobileNumberCountryCode = userProfileTableViewController.userMobileNumberCountryCode
             userMobileNumber = userProfileTableViewController.userMobileNumber
+            userEmailAddress = userProfileTableViewController.userEmailAddress
         }
         UserProfileTableViewController.userProfileTableViewController = self
         
@@ -83,6 +99,7 @@ class UserProfileTableViewController: UITableViewController {
         updateNameLabelText()
         updateBirthdayLabel()
         updateMobileNumberLabel()
+        updateEmailLabel()
     }
     
     func updateNameLabelText() {
@@ -108,6 +125,12 @@ class UserProfileTableViewController: UITableViewController {
             var mobileNumberLabelNewText = "(" + String(mobileNumber).prefix(3) + ") " + String(mobileNumber)[String(mobileNumber).index(String(mobileNumber).endIndex, offsetBy: -1 * (String(mobileNumber).count - 3))...]
             mobileNumberLabelNewText = mobileNumberLabelNewText.prefix(9) + "-" + mobileNumberLabelNewText[mobileNumberLabelNewText.index(mobileNumberLabelNewText.endIndex, offsetBy: -1 * (mobileNumberLabelNewText.count - 9))...]
             mobileNumberLabel.text = mobileNumberLabelNewText
+        }
+    }
+    
+    func updateEmailLabel() {
+        if let emailAddress = userEmailAddress {
+            emailLabel.text = emailAddress
         }
     }
 

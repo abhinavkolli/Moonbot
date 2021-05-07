@@ -198,6 +198,9 @@
                                                 <constraint firstItem="gid-ee-1uy" firstAttribute="centerY" secondItem="2Yx-0I-CK6" secondAttribute="centerY" id="csU-LN-73Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ryc-uS-eS1" kind="show" id="q1z-Qq-pUs"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="IsU-jC-SJl">
                                         <rect key="frame" x="0.0" y="245.5" width="414" height="43.5"/>
@@ -273,6 +276,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="birthdayLabel" destination="fM7-cq-vLu" id="wd1-mq-OJo"/>
+                        <outlet property="emailLabel" destination="4iD-hw-zWU" id="Wdu-xY-R2W"/>
                         <outlet property="mobileNumberLabel" destination="Tr9-oW-nFj" id="oFw-rT-AOM"/>
                         <outlet property="nameLabel" destination="0Y2-LY-xic" id="6gG-3F-mmS"/>
                     </connections>
@@ -628,6 +632,76 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69D-Dj-Esq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2031.8840579710147" y="3201.5625"/>
+        </scene>
+        <!--Email-->
+        <scene sceneID="5j7-I3-PUi">
+            <objects>
+                <tableViewController id="ryc-uS-eS1" customClass="UserProfileEmailTableViewController" customModule="Moonbot" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="fZ5-FO-3fr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection headerTitle="Email Address" id="fpW-ov-dBw">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="xh4-PY-m9x">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xh4-PY-m9x" id="Juk-gW-4Lr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ciaran@vaille.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PbV-Gf-pGb">
+                                                    <rect key="frame" x="20" y="11" width="374" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="PbV-Gf-pGb" firstAttribute="centerY" secondItem="Juk-gW-4Lr" secondAttribute="centerY" id="5Vt-fu-y47"/>
+                                                <constraint firstAttribute="trailing" secondItem="PbV-Gf-pGb" secondAttribute="trailing" constant="20" id="krt-4J-iJ8"/>
+                                                <constraint firstItem="PbV-Gf-pGb" firstAttribute="leading" secondItem="Juk-gW-4Lr" secondAttribute="leading" constant="20" id="qwc-Zc-pgA"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pcd-0I-K6r">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pcd-0I-K6r" id="iPU-ml-jHe">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Note: A valid email address must contain both an &quot;@&quot; and a &quot;.&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHl-ka-zH4">
+                                                    <rect key="frame" x="20" y="11" width="473" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mHl-ka-zH4" firstAttribute="top" secondItem="iPU-ml-jHe" secondAttribute="topMargin" id="05F-gE-kUb"/>
+                                                <constraint firstItem="mHl-ka-zH4" firstAttribute="centerY" secondItem="iPU-ml-jHe" secondAttribute="centerY" id="63n-ql-ofM"/>
+                                                <constraint firstItem="mHl-ka-zH4" firstAttribute="leading" secondItem="iPU-ml-jHe" secondAttribute="leadingMargin" id="Ou9-SN-GQw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mHl-ka-zH4" secondAttribute="trailing" constant="-99" id="wYt-UN-ave"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ryc-uS-eS1" id="d2u-pr-Mkm"/>
+                            <outlet property="delegate" destination="ryc-uS-eS1" id="WJP-Rs-qSr"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Email" id="Rmx-ZL-2Hy"/>
+                    <connections>
+                        <outlet property="userEmailTextField" destination="PbV-Gf-pGb" id="FN8-ZR-Gql"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ned-Wu-NIp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2032" y="3920"/>
         </scene>
     </scenes>
     <resources>
